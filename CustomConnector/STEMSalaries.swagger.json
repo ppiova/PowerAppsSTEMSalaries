@@ -1,0 +1,90 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "ML.NET STEMsalaries",
+    "description": "ML.NET STEMsalaries"
+  },
+  "host": "stemsalariesfunctionpablitopiova.azurewebsites.net",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/STEMsalariesPredictionAPI": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "score": {
+                  "type": "number",
+                  "format": "float",
+                  "description": "score"
+                }
+              }
+            }
+          }
+        },
+        "summary": "STEM Salaries Prediction",
+        "operationId": "GetSalary",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Company": {
+                  "type": "string",
+                  "description": "Company"
+                },
+                "Title": {
+                  "type": "string",
+                  "description": "Title"
+                },
+                "YearsExperience": {
+                  "type": "string",
+                  "description": "YearsExperience"
+                },
+                "YearsCompany": {
+                  "type": "string",
+                  "description": "YearsCompany"
+                },
+                "Gender": {
+                  "type": "string",
+                  "description": "Gender"
+                },
+                "Location": {
+                  "type": "string",
+                  "description": "Location"
+                },
+                "Race": {
+                  "type": "string",
+                  "description": "Race"
+                },
+                "Education": {
+                  "type": "string",
+                  "description": "Education"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {},
+  "security": [],
+  "tags": []
+}
